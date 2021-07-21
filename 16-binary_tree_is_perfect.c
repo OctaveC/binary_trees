@@ -31,7 +31,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	{
 		l_score = binary_tree_is_perfect(left_tree);
 		r_score = binary_tree_is_perfect(right_tree);
-		if (l_score && r_score )
+		if (l_score && r_score)
 			return (1);
 	}
 	return (0);

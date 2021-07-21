@@ -31,7 +31,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	{
 		l_score = binary_tree_is_perfect(left_tree);
 		r_score = binary_tree_is_perfect(right_tree);
-		if (l_score == 0 || r_score == 0)
+		if (l_score && r_score )
 			return (1);
 	}
 	return (0);
@@ -48,10 +48,10 @@ int binary_tree_is_leaf_3(const binary_tree_t *node)
 {
 	if (!node)
 		return (0);
-	if (node->left || node->right)
-		return (0);
-	else
+	if (node->left == NULL && node->right == NULL)
 		return (1);
+	else
+		return (0);
 }
 
 /**
